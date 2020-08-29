@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+.select {
+  position: relative;
+  width: 350px;
+  height: 45px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+.select.open .select__dropdown, .select.open .select__backdrop {
+  display: block;
+}
+.select__backdrop {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.select__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 15px 0 10px;
+  cursor: pointer;
+}
+.select__label span {
+  pointer-events: none;
+}
+.select__icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  pointer-events: none;
+}
+.select__dropdown {
+  display: none;
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  top: 100%;
+}
+.select__list {
+  border: 1px solid #ddd;
+}
+.select__item {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 40px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.select__item.selected, .select__item:hover {
+  background-color: #00b8ff;
+  color: #fff;
+}
+.select__item:last-child {
+  border-bottom: 0;
+}
+
+/*# sourceMappingURL=/custom-select.e31bb0bc.css.map */
